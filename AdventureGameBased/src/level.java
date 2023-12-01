@@ -1,6 +1,9 @@
 
 public class level {
-	public level() {
+
+	private int amountR;
+
+	public level(int teir) {
 		/*generate 1-3 enemies per stage randomly
 		boss fight at end of level
 		a bit of free time after enemy fight
@@ -8,5 +11,8 @@ public class level {
 		Choose enemy - free time - choose 
 		
 		3 or 4 enemies - Boss*/
+		
+		
 	}
+	
 }
