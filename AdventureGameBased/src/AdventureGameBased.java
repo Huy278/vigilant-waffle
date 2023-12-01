@@ -21,6 +21,7 @@ public class AdventureGameBased {
 			System.out.println("You drank");
 		}
 		scanr.nextLine();
+		scanr.close();
 	}
 	public static int decisionMaking(String decision1, String decision2, String decision3, String decision4) {
 		Scanner scanr=new Scanner(System.in);
@@ -86,5 +87,5 @@ public class AdventureGameBased {
 		System.out.print("\033[H\033[2J");  
 
 		System.out.flush();
-	 } 
+	} 
 }
