@@ -66,7 +66,9 @@ public class AdventureGameBased {
 			if(decisionMaking("Attack with: "+thePlayer.getPlayerWeapon1(),"Don't attack","Handstand","Stand still")==1){
 				theEnemy.takingDamage(thePlayer.getPlayerWeapon1().getDamage());
 			}
-			thePlayer.takingDamage(theEnemy.dealingDamage());
+			if(theEnemy.getHealth()>0){
+				thePlayer.takingDamage(theEnemy.dealingDamage());
+			}
 		}
 		if(theEnemy.getHealth()<=0){
 			clearScreen();
