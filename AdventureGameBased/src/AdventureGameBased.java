@@ -4,24 +4,31 @@ public class AdventureGameBased {
 	static Scanner scanr=new Scanner(System.in);
 	MySQLConnect mySQL = new MySQLConnect("adventureGame");
 	public static void main(String[] args) {
-		clearScreen();
-		System.out.println("Adventure Game\n\nEnter to Start");
-		scanr.nextLine();
-		clearScreen();
-		int choice;
-		Player newPlayer=new Player("New guy");
-		choice=decisionMaking("Attack enemy: Baby","Do nothing","Drinking","Leave");
-		if(choice==1){
-			Weapon gun = new Weapon("Gun", 20);
-			Enemy baby= new Enemy("Baby", 10.0, 1.0, 1, 1, gun);
-			battle(newPlayer, baby);
-		}
-		else if(choice==3){
+		boolean running=true;
+		while(running){
+			int level=1;
 			clearScreen();
-			System.out.println("You drank");
+			System.out.println("Adventure Game\n\nEnter to Start");
+			scanr.nextLine();
+			clearScreen();
+			int choice;
+			Player newPlayer=new Player("New guy");
+			choice=decisionMaking("Attack enemy: Baby","Do nothing","Drink potions","Leave");
+			if(choice==1){
+				Weapon gun = new Weapon("Gun", 20);
+				Enemy baby= new Enemy("Baby", 10.0, 1.0, 1, 1, gun);
+				battle(newPlayer, baby);
+			}
+			else if(choice==3){
+				clearScreen();
+				System.out.println("You drank");
+			}
+			System.out.println("Type \"Play Again\" to play again or anything else to quit.");
+			if(!scanr.nextLine().equals("Play Again")){
+				running=false;
+			};
 		}
-		scanr.nextLine();
-		scanr.close();
+			scanr.close();
 	}
 	public static int decisionMaking(String decision1, String decision2, String decision3, String decision4) {
 		Scanner scanr=new Scanner(System.in);
