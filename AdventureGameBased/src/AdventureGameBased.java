@@ -7,10 +7,10 @@ public class AdventureGameBased {
 		System.out.println("Start Game\n\nEnter to Start");
 		scanr.nextLine();
 		int choice;
-		choice=decisionMaking("Kill Babies", "Run away", "Drunk driving", "Pick up weapon");
+		choice=decisionMaking("Kill Babies", "Run away", "level thing", "Pick up weapon");
 	}
 	public static int decisionMaking(String decision1, String decision2, String decision3, String decision4) {
-		Scanner scanr=new Scanner(System.in);
+		Scanner scr=new Scanner(System.in);
 		boolean flag=true;
 		int output=0;
 		
@@ -33,6 +33,11 @@ public class AdventureGameBased {
 			else if(input.equals("3")) {
 				System.out.println("Decision " + input + " selected");
 				output=3;
+
+				//put level method here
+				level starter = new level();
+				
+
 			}
 			else if(input.equals("4")) {
 				System.out.println("Decision " + input + " selected");
