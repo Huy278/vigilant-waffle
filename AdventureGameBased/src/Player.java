@@ -27,4 +27,7 @@ public class Player {
 	public String toString(){
 		return "Player: " + name + " | "+ health + " Health | " + weapon1;
 	}
+	public void givedamage () {
+		
+	}
 }

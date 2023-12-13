@@ -36,11 +36,7 @@ public class Room {
         if (input.equals("4")) {
             /*function that shows the stats of a enemy in the room your in */
         }
-        else {
-            System.out.println("you stayed in the same place forever, and died");
-            dead = true;
-
-        }
+        
         }
     }
     
