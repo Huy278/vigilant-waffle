@@ -22,12 +22,12 @@ public class Room {
         input = Space.nextLine();
         
         if (input.equals("1")) {
-            
+            Battles fight = new Battles();
         }
         if (input.equals("2")) {
             /* pulls up avalible options to other rooms */
 
-            
+
 
         }
         if (input.equals("3")) {
@@ -35,6 +35,11 @@ public class Room {
         }
         if (input.equals("4")) {
             /*function that shows the stats of a enemy in the room your in */
+        }
+        else {
+            System.out.println("you stayed in the same place forever, and died");
+            dead = true;
+
         }
         }
     }

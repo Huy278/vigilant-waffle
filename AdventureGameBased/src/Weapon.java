@@ -4,5 +4,8 @@ public class Weapon {
 	public Weapon() {
 		
 	}
+	public double getDamage(){
+		return damage;
+	}
 
 }
