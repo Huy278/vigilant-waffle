@@ -1,8 +1,8 @@
-
+import java.util.Random;
 public class level {
 
 	private int amountR;
-
+	Random rnd = new Random();
 	public level() {
 		/*generate 1-3 enemies per stage randomly
 		boss fight at end of level
