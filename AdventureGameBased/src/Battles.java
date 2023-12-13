@@ -21,11 +21,6 @@ public class Battles {
 			System.out.println(theEnemy+"\n"+thePlayer+"\n\n"+thePlayer.getName()+" died, You lose");
 			return win;
 		}
-        public static void clearScreen() {  
-
-		System.out.print("\033[H\033[2J");  
-
-		System.out.flush();
-	} 
+        
 	}
 }
