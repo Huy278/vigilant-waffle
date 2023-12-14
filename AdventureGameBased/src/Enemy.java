@@ -6,7 +6,7 @@ public class Enemy {
 	private int souls, defence, tier;
 	private Weapon eWeapon;
 
-	public Enemy(String name, double health,double dmgMult,int defence,int tier) {
+	public Enemy() {
 		
 		defence=1;
 	}
