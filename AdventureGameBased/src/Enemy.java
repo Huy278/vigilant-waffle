@@ -6,13 +6,8 @@ public class Enemy {
 	private int souls, defence, tier;
 	private Weapon eWeapon;
 
-	public Enemy() {
-		name="whale";
-		health=15;
-		dmgMult=3;
-		Weapon eWeapon = new Weapon("blowhole", 2);
-		 
-		this.eWeapon=eWeapon;
+	public Enemy(String name, double health,double dmgMult,int defence,int tier) {
+		
 		defence=1;
 	}
 	public String toString(){
