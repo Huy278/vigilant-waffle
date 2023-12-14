@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>vigilant-waffle</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+	</natures>
+	<variableList>
+		<variable>
+			<name>jdbcConnector</name>
+			<value>file:/C:/mysql-connector-j-8.1.0.jar</value>
+		</variable>
+	</variableList>
+</projectDescription>
