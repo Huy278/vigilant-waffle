@@ -1,9 +1,11 @@
 import java.util.Scanner;
 
 public class AdventureGameBased {
-	static Scanner scanr=new Scanner(System.in);
+	static Scanner scanr = new Scanner(System.in);
 	MySQLConnect mySQL = new MySQLConnect("adventureGame");
+	static allWeapons weaponList = new allWeapons();
 	public static void main(String[] args) {
+		weaponList.addWeapons();
 		boolean running=true;
 		while(running){
 			int level=1;
@@ -13,10 +15,9 @@ public class AdventureGameBased {
 			clearScreen();
 			int choice;
 			Player newPlayer=new Player("New guy");
-			choice=decisionMaking("Attack enemy: Baby","Do nothing","Drink potions","Leave");
+				Enemy baby= new Enemy("Baby", 10.0, 1.0, 1, 2);
+			choice=decisionMaking("Attack "+baby,"Do nothing","Drink potions","Leave");
 			if(choice==1){
-				Weapon gun = new Weapon("Gun", 20);
-				Enemy baby= new Enemy("Baby", 10.0, 1.0, 1, 1, gun);
 				battle(newPlayer, baby);
 			}
 			else if(choice==3){
@@ -31,17 +32,16 @@ public class AdventureGameBased {
 			scanr.close();
 	}
 	public static int decisionMaking(String decision1, String decision2, String decision3, String decision4) {
-		Scanner scanr=new Scanner(System.in);
 		boolean flag=true;
 		int output=0;
-		
+		String input="";
 		while(flag) {
 			System.out.println(
 			"\n1. "+ decision1+
 			"\n2. "+ decision2+
 			"\n3. "+ decision3+
 			"\n4. "+ decision4);
-			String input=scanr.nextLine();
+			input = scanr.nextLine();
 			flag=false;
 			if(input.equals("1")) {
 				output=1;
@@ -52,6 +52,7 @@ public class AdventureGameBased {
 			else if(input.equals("3")) {
 				output=3;
 			}
+			
 			else if(input.equals("4")) {
 				output=4;
 			}
@@ -89,10 +90,8 @@ public class AdventureGameBased {
 			return win;
 		}
 	}
-	public static void clearScreen() {  
-
-		System.out.print("\033[H\033[2J");  
-
+	public static void clearScreen() {
+		System.out.print("\033[H\033[2J");
 		System.out.flush();
 	} 
 }

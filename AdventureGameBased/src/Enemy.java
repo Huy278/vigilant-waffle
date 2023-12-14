@@ -4,13 +4,13 @@ public class Enemy {
 	private double health, dmgMult;
 	private int souls, defence, tier;
 	private Weapon eWeapon;
-	public Enemy(String name, double health, double dmgMult, int souls, int tier, Weapon eWeapon) {
+	public Enemy(String name, double health, double dmgMult, int souls, int tier) {
 		this.name=name;
 		this.health=health;
 		this.dmgMult=dmgMult;
 		this.souls=souls;
 		this.tier=tier;
-		this.eWeapon=eWeapon;
+		eWeapon=allWeapons.randomTieredWeapon(tier);
 		defence=1;
 	}
 	public String toString(){
