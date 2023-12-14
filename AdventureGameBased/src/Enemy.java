@@ -5,13 +5,13 @@ public class Enemy {
 	private double health, dmgMult;
 	private int souls, defence, tier;
 	private Weapon eWeapon;
-	
+
 	public Enemy() {
 		name="whale";
 		health=15;
 		dmgMult=3;
-		
-		
+		Weapon eWeapon = new Weapon("blowhole", 2);
+		 
 		this.eWeapon=eWeapon;
 		defence=1;
 	}

@@ -2,19 +2,19 @@ import java.util.Random;
 import java.util.Scanner;
 public class Room {
     Random rnd = new Random();
-    boolean dead = false;
+    boolean done = false;
     Scanner Space = new Scanner(System.in);
     String input;
     int amount;
     
     public Room (Player thePlayer) {
         Weapon gun; 
-        Enemy e = new Enemy();
+        Enemy[] enemyArray;
         amount = rnd.nextInt(1,5);
-
+        enemyCreation(amount);
         
         System.out.println(amount);
-        while (!dead) {
+        while (!done) {
         System.out.println("what arth you doin");
         System.out.println("1: FIGHT!!! (if you want)");
         System.out.println("2: leave to another room");
@@ -26,7 +26,7 @@ public class Room {
         if (input.equals("1")) {
             Battles b = new Battles();
 
-            b.battle(thePlayer,e);
+            b.battle(thePlayer,enemyArray[1]);
         }
         if (input.equals("2")) {
             /* pulls up avalible options to other rooms */
@@ -43,6 +43,15 @@ public class Room {
         
         }
     }
-    
+    public Enemy enemyCreation (int amount) {
+        
+        
+        // Enemy[] eList = new Enemy[];
+
+        for(int i = 1; i <= amount; i++) {
+            Enemy e = new Enemy();
+            e.name("dog");
+        }
+    }
     
 }
