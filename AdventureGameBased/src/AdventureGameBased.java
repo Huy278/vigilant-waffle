@@ -23,6 +23,10 @@ public class AdventureGameBased {
 			else if(choice==3){
 				clearScreen();
 				System.out.println("You drank");
+				//use this to manually test mysql connection stuff
+				/*MySQLConnect alfa = new MySQLConnect("adventure");
+				Object[][] enemyArr = alfa.unpackEnemyDatabase();
+				print(enemyArr);*/
 			}
 			System.out.println("Type \"Play Again\" to play again or anything else to quit.");
 			if(!scanr.nextLine().equals("Play Again")){
@@ -94,4 +98,18 @@ public class AdventureGameBased {
 		System.out.print("\033[H\033[2J");
 		System.out.flush();
 	} 
+	
+	static void print (Object[][] arr) {
+		String temp = "";
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j< arr[0].length; j++) {
+				temp += arr[i][j];
+				if (j != arr[0].length-1) {
+					temp += " | ";
+				}
+			}
+			temp += "\n";
+		}
+		System.out.println(temp);
+	}
 }
