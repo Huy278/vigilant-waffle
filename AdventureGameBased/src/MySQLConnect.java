@@ -43,7 +43,9 @@ public class MySQLConnect {
     	results=statement.executeQuery("select count(id) from enemy;");
     	
 		
-			height = 7;
+    	while (results.next()) {
+			height = results.getInt(1);
+		}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
