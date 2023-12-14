@@ -17,7 +17,7 @@ public class Battles {
 		System.out.println("fight yes");
 		scanr.nextLine();
 		int choice;
-		choice=decisionMaking("Kill Babies", "Run away", "level thing", "Pick up weapon");
+		choice=decisionMaking("fioght enemy", "Run away", "dontpickthis","dontpickthis");
 	}
 	public static boolean battle(Player thePlayer, Enemy theEnemy){
         boolean win=true;
@@ -45,7 +45,7 @@ public class Battles {
         System.out.print("\033[H\033[2J");
         System.out.flush();
     }
-	public static int decisionMaking(String decision1, String decision2, String decision3, String decision4) {
+	public static int decisionMaking(String decision1, String decision2,String decision3,String decision4) {
 		Scanner scanr=new Scanner(System.in);
 		boolean flag=true;
 		int output=0;
@@ -60,6 +60,7 @@ public class Battles {
 			flag=false;
 			if(input.equals("1")) {
 				output=1;
+				battle();
 			}
 			else if(input.equals("2")) {
 				output=2;
