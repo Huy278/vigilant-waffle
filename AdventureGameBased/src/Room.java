@@ -6,8 +6,10 @@ public class Room {
     Scanner Space = new Scanner(System.in);
     String input;
     int amount;
+    
     public Room (Player thePlayer) {
-        Enemy e = new Enemy("meanie");	
+        Weapon gun; 
+        Enemy e = new Enemy();
         amount = rnd.nextInt(1,5);
 
         

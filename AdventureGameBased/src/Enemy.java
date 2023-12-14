@@ -5,12 +5,13 @@ public class Enemy {
 	private double health, dmgMult;
 	private int souls, defence, tier;
 	private Weapon eWeapon;
-	public Enemy(String name, double health, double dmgMult, int souls, int tier, Weapon eWeapon) {
-		this.name=name;
-		this.health=health;
-		this.dmgMult=dmgMult;
-		this.souls=souls;
-		this.tier=tier;
+	
+	public Enemy() {
+		name="whale";
+		health=15;
+		dmgMult=3;
+		
+		
 		this.eWeapon=eWeapon;
 		defence=1;
 	}
