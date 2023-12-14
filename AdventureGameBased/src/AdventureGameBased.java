@@ -13,8 +13,8 @@ public class AdventureGameBased {
 		Scanner scr=new Scanner(System.in);
 		boolean flag=true;
 		int output=0;
-		
-		while(flag) {
+		Player thePlayer = new Player("you");
+
 			System.out.println(
 			"\n1. "+ decision1+
 			"\n2. "+ decision2+
@@ -35,7 +35,7 @@ public class AdventureGameBased {
 				output=3;
 
 				//put level method here
-				level starter = new level();
+				level starter = new level(thePlayer);
 				
 
 			}
@@ -47,7 +47,7 @@ public class AdventureGameBased {
 				flag=true;
 				System.out.println("*ERROR* Please input an option from the above options " + input);
 			}
-		}
+		
 		return output;
 	}
 }

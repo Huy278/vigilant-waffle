@@ -6,8 +6,8 @@ public class Room {
     Scanner Space = new Scanner(System.in);
     String input;
     int amount;
-    public Room () {
-
+    public Room (Player thePlayer) {
+        Enemy e = new Enemy("meanie");	
         amount = rnd.nextInt(1,5);
 
         
@@ -16,13 +16,15 @@ public class Room {
         System.out.println("what arth you doin");
         System.out.println("1: FIGHT!!! (if you want)");
         System.out.println("2: leave to another room");
-        System.out.println("3: check invratory");
+        System.out.println("3: check your status");
         System.out.println("4: check surounding/enemys");
       
         input = Space.nextLine();
         
         if (input.equals("1")) {
-            Battles fight = new Battles();
+            Battles b = new Battles();
+
+            b.battle(thePlayer,e);
         }
         if (input.equals("2")) {
             /* pulls up avalible options to other rooms */
@@ -31,7 +33,7 @@ public class Room {
 
         }
         if (input.equals("3")) {
-            /* function for cecking ivotory*/
+            /* function for cecking status*/
         }
         if (input.equals("4")) {
             /*function that shows the stats of a enemy in the room your in */

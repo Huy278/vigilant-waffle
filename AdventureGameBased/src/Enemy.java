@@ -5,8 +5,8 @@ public class Enemy {
 	private double health, dmgMult;
 	private int soul, defence, tier;
 	private Weapon eWeapon;
-	public Enemy() {
-		name = "monstasity";
+	public Enemy(String name) {
+		
 	}
 	public String toString(){
 		return "Enemy: " + name + " | "+ health + " Health | " + eWeapon;
