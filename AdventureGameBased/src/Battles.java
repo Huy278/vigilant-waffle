@@ -46,7 +46,7 @@ public class Battles {
         System.out.flush();
     }
 	public static int decisionMaking(String decision1, String decision2, String decision3, String decision4) {
-		Scanner scr=new Scanner(System.in);
+		Scanner scanr=new Scanner(System.in);
 		boolean flag=true;
 		int output=0;
 		
@@ -59,29 +59,25 @@ public class Battles {
 			String input=scanr.nextLine();
 			flag=false;
 			if(input.equals("1")) {
-				System.out.println("Decision " + input + " selected");
 				output=1;
 			}
 			else if(input.equals("2")) {
-				System.out.println("Decision " + input + " selected");
 				output=2;
 			}
 			else if(input.equals("3")) {
-				System.out.println("Decision " + input + " selected");
 				output=3;
-
-				//put level method here
-				level starter = new level();
-				
-
 			}
 			else if(input.equals("4")) {
-				System.out.println("Decision " + input + " selected");
 				output=4;
 			}
 			else {
 				flag=true;
+				clearScreen();
 				System.out.println("*ERROR* Please input an option from the above options " + input);
+			}
+			if(!flag){
+				clearScreen();
+				System.out.println("Decision " + input + " selected\n");
 			}
 		}
 		return output;
