@@ -43,6 +43,9 @@ insert into Weapon (name, damage, tier) values("flashing axe", 53.0, 3);
 insert into Weapon (name, damage, tier) values("supreme sai", 330.0, 6);
 insert into Weapon (name, damage, tier) values("body launcher", 59.0, 3);
 insert into Weapon (name, damage, tier) values("demon warhead", 170.0, 5);
+insert into Weapon (name, damage, tier) values("atom slicer", 96.0, 4);
+insert into Weapon (name, damage, tier) values("havoc rifle", 310.0, 6);
+insert into Weapon (name, damage, tier) values("terror shovle",415.0, 6);
 
 insert into Enemy (name,health,dmgMult, coins, tier) values("freaky dwarf", 200, 13.0, 150, 1);
 insert into Enemy (name,health,dmgMult, coins, tier) values("malnourished troll", 205, 14.0, 200, 1);
@@ -85,6 +88,7 @@ insert into Food (name, health, tier) values("godlike chocolate croissants", 100
 insert into Armor (name, defence, tier) values("pinnacle immortal armor", 10, 6);
 insert into Armor (name, defence, tier) values("weak immortal armor", 8, 5);
 insert into Armor (name, defence, tier) values("fundamental demi armor", 6, 3);
+insert into Armor (name, defence, tier) values("covered-in-fish armor", 7, 4);
 insert into Armor (name, defence, tier) values("pinnacle mortal armor", 4, 2);
 insert into Armor (name, defence, tier) values("weak mortal armor", 2, 1);
 select * from Enemy;
