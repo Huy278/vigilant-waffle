@@ -33,4 +33,7 @@ public class Boss {
 	public int getSouls(){
 		return soul;
 	}
+	public void addHealth(double healthAdded){
+		health= health + healthAdded
+	}
 }

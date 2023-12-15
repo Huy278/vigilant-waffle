@@ -43,4 +43,7 @@ public class Player {
 	public void deleteInventoryObj(int slot){
 		inventory[slot-1]=null;
 	}
+	public void addHealth(double healthAdded){
+		health= health + healthAdded
+	}
 }
