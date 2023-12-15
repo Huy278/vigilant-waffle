@@ -40,6 +40,6 @@ public class Boss {
 		return soul;
 	}
 	public void addHealth(double healthAdded){
-		health= health + healthAdded
+		health= health + healthAdded;
 	}
 }

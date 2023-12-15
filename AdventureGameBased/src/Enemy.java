@@ -55,6 +55,6 @@ public class Enemy {
 		return souls;
 	}
 	public void addHealth(double healthAdded){
-		health= health + healthAdded
+		health= health + healthAdded;
 	}
 }
