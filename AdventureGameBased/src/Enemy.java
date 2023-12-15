@@ -54,4 +54,7 @@ public class Enemy {
 	public int getSouls(){
 		return souls;
 	}
+	public void addHealth(double healthAdded){
+		health= health + healthAdded
+	}
 }

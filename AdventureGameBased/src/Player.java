@@ -83,4 +83,8 @@ public class Player {
 		}
 		return weaponSelected.getDamage();
 	}
+	//(Chris)
+	public void addHealth(double healthAdded){
+		health= health + healthAdded;
+	}
 }
