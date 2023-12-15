@@ -29,5 +29,7 @@ public class Enemy {
 	public Weapon getWeapon(){
 		return eWeapon;
 	}
-
+	public int getTier(){
+		return tier;
+	}
 }

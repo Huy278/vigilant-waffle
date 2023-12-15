@@ -37,7 +37,7 @@ public class AdventureGameBased {
 				output=3;
 
 				//put level method here
-				level starter = new level(thePlayer);
+				//level starter = new level(thePlayer);
 				
 
 			}

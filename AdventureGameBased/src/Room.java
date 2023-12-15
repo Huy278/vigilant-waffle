@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 public class Room {
@@ -10,9 +11,9 @@ public class Room {
 
     public Room (Player thePlayer) {
         Weapon gun; 
-        Enemy[] enemyArray;
+        //Enemy[] enemyArray = new Enemy[amount];
         amount = rnd.nextInt(1,5);
-        
+        ArrayList<Enemy> enemyArray = new ArrayList<Enemy>();
         
         System.out.println(amount);
         while (!done) {
@@ -25,11 +26,12 @@ public class Room {
         input = Space.nextLine();
         
         if (input.equals("1")) {
+            input = "";
             System.out.println("who fighting");
-            Ichose = Space.nextLine();
-            Battles b = new Battles();
-
-            b.battle(thePlayer,enemyArray[Ichose -1]);
+            input = Space.nextLine();
+            Ichose = Integer.parseInt(input);
+            Enemy CEnemy = enemyArray.get(Ichose -1);
+            Battles.battle(thePlayer,CEnemy);
         }
         if (input.equals("2")) {
             /* pulls up avalible options to other rooms */
@@ -46,15 +48,16 @@ public class Room {
         
         }
     }
-    public Enemy enemyCreation (int amount, Enemy[] enemyArray) {
+    public ArrayList<Enemy> enemyCreation (int amount, ArrayList<Enemy> enemyArray) {
         
-        Enemy e = new Enemy();
+       
         // Enemy[] eList = new Enemy[];
 
-        for(int i = 1; i <= amount; i++) {
-            
-            enemyArray.add(e) ;
+        for(int i = 1; i < amount; i++) {
+            Enemy e = new Enemy();
+            enemyArray.add(e);
         }
+        return enemyArray;
     }
     
 }
