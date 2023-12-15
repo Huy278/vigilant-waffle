@@ -6,19 +6,28 @@ public class AdventureGameBased {
 	static allWeapons weaponList = new allWeapons();
 	static allEnemies enemyList= new allEnemies();
 	public static void main(String[] args) {
+		//creates the table which james did
 		mySQL.createTable();
-		Object[][] weaponArray=mySQL.unpackWeaponDatabase();
-		putWeaponsInArray(weaponArray);
+		//Makes the object array and it makes the database into a 2 dimensional array
+		Object[][] addArray=mySQL.unpackWeaponDatabase();
+		//puts the weapons into a weapon array from the 2 dimensional array
+		putWeaponsInArray(addArray);
+		//Makes the object array and it makes the database into a 2 dimensional array
 		Object[][] enemyArr = mySQL.unpackEnemyDatabase();
+		//puts the enemies into an enemy array from the 2 dimensional array
 		putEnemiesInArray(enemyArr);
 		boolean running=true;
+		//while loop contains the entirety of the game currently
 		while(running){
 			clearScreen();
 			System.out.println("Adventure Game\n\nEnter to Start");
+			//Once they click enter it goes
 			scanr.nextLine();
 			clearScreen();
 			int choice;
+			//hard coded player object
 			Player newPlayer=new Player("New guy");
+			//random enemy
 			Enemy newEnemy= allEnemies.randomTieredEnemy(1);
 			choice=decisionMaker("Attack "+newEnemy,"Do nothing","Drink potions","Leave");
 			if(choice==1){
@@ -107,8 +116,8 @@ public class AdventureGameBased {
 		boolean win=true;
 		while(theEnemy.getHealth()>0){
 			System.out.println(theEnemy+"\n"+thePlayer);
-			if(decisionMaking("Attack with: "+thePlayer.getPlayerWeapon1(),"Don't attack","Handstand","Stand still")==1){
-				theEnemy.takingDamage(thePlayer.getPlayerWeapon1().getDamage());
+			if(decisionMaking("Attack with: "+thePlayer.getSelectedInv(),"Don't attack","Handstand","Stand still")==1){
+				theEnemy.takingDamage(thePlayer.dealingDamage());
 			}
 			if(theEnemy.getHealth()>0){
 				thePlayer.takingDamage(theEnemy.dealingDamage());

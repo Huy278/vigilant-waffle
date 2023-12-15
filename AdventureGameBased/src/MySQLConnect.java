@@ -59,19 +59,19 @@ public class MySQLConnect {
 			statement.executeUpdate("insert into Weapon (name, damage, tier) values(\"holy chain\", 300.0, 6); ");
 			statement.executeUpdate("insert into Weapon (name, damage, tier) values(\"heavenly dagger\", 500.0, 6); ");
 			statement.executeUpdate("insert into Weapon (name, damage, tier) values(\"ice bow\", 11.0, 1); ");
-			statement.executeUpdate( "insert into Weapon (name, damage, tier) values(\"bone sword\", 44.0, 3); ");
+			statement.executeUpdate("insert into Weapon (name, damage, tier) values(\"bone sword\", 44.0, 3); ");
 			statement.executeUpdate("insert into Weapon (name, damage, tier) values(\"vortex dart\",74.0, 4); ");
 			statement.executeUpdate("insert into Weapon (name, damage, tier) values(\"flaming kunai\", 80.0, 4); ");
-			statement.executeUpdate( "insert into Weapon (name, damage, tier) values(\"storm breaker\", 83.0, 4); ");
-			statement.executeUpdate( "insert into Weapon (name, damage, tier) values(\"detached darkness\", 7.0, 1); ");
-			statement.executeUpdate( "insert into Weapon (name, damage, tier) values(\"mega potato\", 3.0, 1); ");
-			statement.executeUpdate( "insert into Weapon (name, damage, tier) values(\"magic shard\", 25.0, 2);");
+			statement.executeUpdate("insert into Weapon (name, damage, tier) values(\"storm breaker\", 83.0, 4); ");
+			statement.executeUpdate("insert into Weapon (name, damage, tier) values(\"detached darkness\", 7.0, 1); ");
+			statement.executeUpdate("insert into Weapon (name, damage, tier) values(\"mega potato\", 3.0, 1); ");
+			statement.executeUpdate("insert into Weapon (name, damage, tier) values(\"magic shard\", 25.0, 2);");
 			statement.executeUpdate("insert into Weapon (name, damage, tier) values(\"multiversal trident\", 100.0, 5); ");
 			statement.executeUpdate("insert into Weapon (name, damage, tier) values(\"soul shooter\", 150.0, 5); ");
 			statement.executeUpdate("insert into Weapon (name, damage, tier) values(\"cosmic chainsaw\", 200.0, 5); ");
 			statement.executeUpdate("insert into Weapon (name, damage, tier) values(\"moon zephyr\", 18.0, 2); ");
 			statement.executeUpdate("insert into Weapon (name, damage, tier) values(\"basic paper\", 1.0, 1); ");
-			statement.executeUpdate( "insert into Weapon (name, damage, tier) values(\"radio nunchuck\", 35.0, 3); ");
+			statement.executeUpdate("insert into Weapon (name, damage, tier) values(\"radio nunchuck\", 35.0, 3); ");
 			statement.executeUpdate("insert into Weapon (name, damage, tier) values(\"time hammer\",250.0, 6); ");
 			statement.executeUpdate("insert into Weapon (name, damage, tier) values(\"atomic knife\", 105.0, 5); ");
 			statement.executeUpdate("insert into Weapon (name, damage, tier) values(\"wave clock\", 48.0, 3); ");
@@ -85,12 +85,12 @@ public class MySQLConnect {
 			
 			statement.executeUpdate("insert into Enemy (name,health,dmgMult, coins, tier) values(\"freaky dwarf\", 200, 1.3, 150, 1); ");
 			statement.executeUpdate("insert into Enemy (name,health,dmgMult, coins, tier) values(\"malnourished troll\", 205, 1.4, 200, 1); ");
-			statement.executeUpdate( "insert into Enemy (name,health,dmgMult, coins, tier) values(\"scorpion guy\", 210, 1.5, 250, 2); ");
+			statement.executeUpdate("insert into Enemy (name,health,dmgMult, coins, tier) values(\"scorpion guy\", 210, 1.5, 250, 2); ");
 			statement.executeUpdate("insert into Enemy (name,health,dmgMult, coins, tier) values(\"murderous spirit\", 215, 1.6, 300, 2); ");
-			statement.executeUpdate( "insert into Enemy (name,health,dmgMult, coins, tier) values(\"metal dragon\", 220, 1.7, 350, 3); ");
+			statement.executeUpdate("insert into Enemy (name,health,dmgMult, coins, tier) values(\"metal dragon\", 220, 1.7, 350, 3); ");
 			statement.executeUpdate("insert into Enemy (name,health,dmgMult, coins, tier) values(\"frost soldier\", 225, 1.8, 400, 3); ");
 			statement.executeUpdate("insert into Enemy (name,health,dmgMult, coins, tier) values(\"rainbow ghoul\", 230, 1.9, 450, 3); ");
-			statement.executeUpdate( "insert into Enemy (name,health,dmgMult, coins, tier) values(\"cloaked fox\", 235, 2.0, 500, 4); ");
+			statement.executeUpdate("insert into Enemy (name,health,dmgMult, coins, tier) values(\"cloaked fox\", 235, 2.0, 500, 4); ");
 			statement.executeUpdate("insert into Enemy (name,health,dmgMult, coins, tier) values(\"zombie ox\", 240, 2.1, 550, 4); ");
 			statement.executeUpdate("insert into Enemy (name,health,dmgMult, coins, tier) values(\"robtic bear\", 245, 2.2, 600, 4); ");
 			statement.executeUpdate("insert into Enemy (name,health,dmgMult, coins, tier) values(\"mutated gorilla\", 250, 2.3, 650, 4); ");
@@ -99,8 +99,8 @@ public class MySQLConnect {
 			statement.executeUpdate("insert into Enemy (name,health,dmgMult, coins, tier) values(\"manowl\", 400, 2.6, 800, 5); ");
 			statement.executeUpdate("insert into Enemy (name,health,dmgMult, coins, tier) values(\"ball boy\", 450, 2.7, 850, 5); ");
 			statement.executeUpdate("insert into Enemy (name,health,dmgMult, coins, tier) values(\"poison king\", 500, 2.8, 900, 6); ");
-			statement.executeUpdate( "insert into Enemy (name,health,dmgMult, coins, tier) values(\"infinity bug\", 550,2.9, 950, 6); ");
-			statement.executeUpdate( "insert into Enemy (name,health,dmgMult, coins, tier) values(\"broken man\", 600, 3.0, 1000, 6); ");
+			statement.executeUpdate("insert into Enemy (name,health,dmgMult, coins, tier) values(\"infinity bug\", 550,2.9, 950, 6); ");
+			statement.executeUpdate("insert into Enemy (name,health,dmgMult, coins, tier) values(\"broken man\", 600, 3.0, 1000, 6); ");
 			
 			statement.executeUpdate("insert into Boss (name,health,dmgMult, coins, tier) values(\"humankind\", 900, 4.0, 1800, 1);");
 			statement.executeUpdate("insert into Boss (name,health,dmgMult, coins, tier) values(\"extraterrestrial\", 950, 5.0, 2100, 2); ");
@@ -109,18 +109,18 @@ public class MySQLConnect {
 			statement.executeUpdate("insert into Boss (name,health,dmgMult, coins, tier) values(\"death reaper\", 1100, 8.0, 3000, 5); ");
 			statement.executeUpdate("insert into Boss (name,health,dmgMult, coins, tier) values(\"infinty god\", 1150, 9.0, 3300, 6); ");
 
-			statement.executeUpdate( "insert into Food (name, health, tier) values(\"mystical rare steak\", 40, 3); ");
+			statement.executeUpdate("insert into Food (name, health, tier) values(\"mystical rare steak\", 40, 3); ");
 			statement.executeUpdate("insert into Food (name, health, tier) values(\"monstrous turkey bacon\", 80, 5); ");
 			statement.executeUpdate("insert into Food (name, health, tier) values(\"sand tree biscuit\", 10, 1); ");
 			statement.executeUpdate("insert into Food (name, health, tier) values(\"scrumptious horn berries\", 85, 5); ");
 			statement.executeUpdate("insert into Food (name, health, tier) values(\"ultra smokey pasta\", 95, 6); ");
 			statement.executeUpdate("insert into Food (name, health, tier) values(\"divine chicken wings\", 100, 6); ");
-			statement.executeUpdate( "insert into Food (name, health, tier) values(\"celestial seafood sandwhich\", 65, 4); ");
+			statement.executeUpdate("insert into Food (name, health, tier) values(\"celestial seafood sandwhich\", 65, 4); ");
 			statement.executeUpdate("insert into Food (name, health, tier) values(\"luminous glowing nuts\", 75, 4); ");
 			statement.executeUpdate("insert into Food (name, health, tier) values(\"decent cotton candy\", 25, 2); ");
 			statement.executeUpdate("insert into Food (name, health, tier) values(\"godlike chocolate croissants\", 100,6); ");
 
-			statement.executeUpdate( "insert into Armor (name, defence, tier) values(\"pinnacle immortal armor\", 10, 6); ");
+			statement.executeUpdate("insert into Armor (name, defence, tier) values(\"pinnacle immortal armor\", 10, 6); ");
 			statement.executeUpdate("insert into Armor (name, defence, tier) values(\"weak immortal armor\", 8, 5); ");
 			statement.executeUpdate("insert into Armor (name, defence, tier) values(\"fundamental demi armor\", 6, 3); ");
 			statement.executeUpdate("insert into Armor (name, defence, tier) values(\"pinnacle mortal armor\", 4, 2); ");

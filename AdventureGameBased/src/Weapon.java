@@ -2,16 +2,19 @@ public class Weapon {
 	private String name;
 	private double damage;
 	private int tier;
+	//Parameterless Construtor(Huy)
 	public Weapon(){
 		name="ERROR [No weapon]";
 		damage=0.0;
 		tier=0;
 	}
+	//Constructor
 	public Weapon(String name, double damage, int tier) {
 		this.name=name;
 		this.damage=damage;
 		this.tier=tier;
 	}
+	//getters
 	public double getDamage(){
 		return damage;
 	}
@@ -21,6 +24,7 @@ public class Weapon {
 	public int getTier(){
 		return tier;
 	}
+	//prints the weapon characteristics
 	public String toString(){
 		String output = name+" ";
 		if(tier==1){
