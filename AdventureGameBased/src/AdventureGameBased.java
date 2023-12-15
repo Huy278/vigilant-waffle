@@ -4,16 +4,18 @@ public class AdventureGameBased {
 	static Scanner scanr=new Scanner(System.in);
 	MySQLConnect mySQL = new MySQLConnect("adventure");
 	public static void main(String[] args) {
+		Player thePlayer = new Player("you");
 		System.out.println("Start Game\n\nEnter to Start");
 		scanr.nextLine();
 		int choice;
-		choice=decisionMaking("Kill Babies", "Run away", "level thing", "Pick up weapon");
+		level starter = new level(thePlayer);
+		//choice=decisionMaking("Kill Babies", "Run away", "level thing", "Pick up weapon");
 	}
 	public static int decisionMaking(String decision1, String decision2, String decision3, String decision4) {
 		Scanner scr=new Scanner(System.in);
 		boolean flag=true;
 		int output=0;
-		Player thePlayer = new Player("you");
+		
 
 			System.out.println(
 			"\n1. "+ decision1+

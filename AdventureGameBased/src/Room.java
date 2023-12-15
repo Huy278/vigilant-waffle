@@ -12,7 +12,7 @@ public class Room {
         Weapon gun; 
         Enemy[] enemyArray;
         amount = rnd.nextInt(1,5);
-        enemyArray.add(enemyCreation(amount));
+        
         
         System.out.println(amount);
         while (!done) {
@@ -26,7 +26,7 @@ public class Room {
         
         if (input.equals("1")) {
             System.out.println("who fighting");
-
+            Ichose = Space.nextLine();
             Battles b = new Battles();
 
             b.battle(thePlayer,enemyArray[Ichose -1]);
@@ -46,14 +46,14 @@ public class Room {
         
         }
     }
-    public Enemy enemyCreation (int amount) {
+    public Enemy enemyCreation (int amount, Enemy[] enemyArray) {
         
-        
+        Enemy e = new Enemy();
         // Enemy[] eList = new Enemy[];
 
         for(int i = 1; i <= amount; i++) {
-            Enemy e = new Enemy();
-            enemyArray += e;
+            
+            enemyArray.add(e) ;
         }
     }
     
