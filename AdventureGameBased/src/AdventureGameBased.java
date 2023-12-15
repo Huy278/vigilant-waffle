@@ -29,7 +29,7 @@ public class AdventureGameBased {
 				System.out.println("You drank");
 				//use this to manually test mysql connection stuff
 				
-				MySQLConnect alfa = new MySQLConnect("adventure");
+				/*MySQLConnect alfa = new MySQLConnect("adventure");
 				alfa.createTable();
 				Object[][] enemyArr = alfa.unpackEnemyDatabase();
 				print(enemyArr);
