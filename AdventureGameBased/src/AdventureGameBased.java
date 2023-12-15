@@ -6,7 +6,7 @@ public class AdventureGameBased {
 	static allWeapons weaponList = new allWeapons();
 	static allEnemies enemyList= new allEnemies();
 	public static void main(String[] args) {
-		//mySQL.createTable();
+		mySQL.createTable();
 		Object[][] weaponArray=mySQL.unpackWeaponDatabase();
 		putWeaponsInArray(weaponArray);
 		Object[][] enemyArr = mySQL.unpackEnemyDatabase();
@@ -19,7 +19,7 @@ public class AdventureGameBased {
 			clearScreen();
 			int choice;
 			Player newPlayer=new Player("New guy");
-			Enemy newEnemy= allEnemies.randomTieredEnemy(2);
+			Enemy newEnemy= allEnemies.randomTieredEnemy(1);
 			choice=decisionMaking("Attack "+newEnemy,"Do nothing","Drink potions","Leave");
 			if(choice==1){
 				battle(newPlayer, newEnemy);
@@ -79,13 +79,16 @@ public class AdventureGameBased {
 	}
 	public static boolean battle(Player thePlayer, Enemy theEnemy){
 		boolean win=true;
-		while(theEnemy.getHealth()>0&&thePlayer.getHealth()>0){
+		while(theEnemy.getHealth()>0){
 			System.out.println(theEnemy+"\n"+thePlayer);
 			if(decisionMaking("Attack with: "+thePlayer.getPlayerWeapon1(),"Don't attack","Handstand","Stand still")==1){
 				theEnemy.takingDamage(thePlayer.getPlayerWeapon1().getDamage());
 			}
 			if(theEnemy.getHealth()>0){
 				thePlayer.takingDamage(theEnemy.dealingDamage());
+			}
+			if(thePlayer.getHealth()<=0){
+				break;
 			}
 		}
 		if(theEnemy.getHealth()<=0){
