@@ -20,7 +20,7 @@ public class AdventureGameBased {
 			int choice;
 			Player newPlayer=new Player("New guy");
 			Enemy newEnemy= allEnemies.randomTieredEnemy(1);
-			choice=decisionMaking("Attack "+newEnemy,"Do nothing","Drink potions","Leave");
+			choice=decisionMaker("Attack "+newEnemy,"Do nothing","Drink potions","Leave");
 			if(choice==1){
 				battle(newPlayer, newEnemy);
 			}
@@ -41,6 +41,30 @@ public class AdventureGameBased {
 			};
 		}
 			scanr.close();
+	}
+	public static int decisionMaker(String... decisions){
+		boolean flag=true;
+		int output=0;
+		String input="";
+		while(flag){
+			for(int i=0; i<decisions.length; i++){
+				System.out.println((i+1)+". "+decisions[i]);
+			}
+			input=scanr.nextLine();
+			flag=false;
+			try {
+				if(Integer.parseInt(input)<decisions.length&&Integer.parseInt(input)>0){
+        			output=Integer.parseInt(input);
+				}
+    		} catch (NumberFormatException e) {
+				flag=true;
+    		}
+			if(flag){
+				clearScreen();
+				System.out.println("*ERROR* Please input an option from the above options\n");
+			}
+		}
+		return output;
 	}
 	public static int decisionMaking(String decision1, String decision2, String decision3, String decision4) {
 		boolean flag=true;
@@ -70,7 +94,7 @@ public class AdventureGameBased {
 			else {
 				flag=true;
 				clearScreen();
-				System.out.println("*ERROR* Please input an option from the above options " + input);
+				System.out.println("*ERROR* Please input an option from the above options" + input);
 			}
 			if(!flag){
 				clearScreen();
@@ -132,4 +156,5 @@ public class AdventureGameBased {
 			enemyList.addEnemy(arr[i][0].toString(),((Number)arr[i][1]).doubleValue(),((Number)arr[i][2]).doubleValue(),(int)arr[i][3],(int)arr[i][4]);
 		}
 	}
+	//static void pickWeapon
 }

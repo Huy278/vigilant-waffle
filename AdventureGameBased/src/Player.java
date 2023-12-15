@@ -10,7 +10,7 @@ public class Player {
 		health = 100;
 		soul = 0;
 		defense=1;
-		weapon1 = new Weapon("Pitbull", 5.0, 1);
+		weapon1 = new Weapon("Pitbull", 10.0, 1);
 		inventory = new Object[9];
 	}
 	public Weapon getPlayerWeapon1(){
@@ -29,7 +29,7 @@ public class Player {
 		health-=(damageIn/defense);
 	}
 	public String toString(){
-		return "Player: " + name + " | "+ health + " Health | " + weapon1;
+		return "Player: " + name + " | "+ Math.round(health) + " Health | " + weapon1;
 	}
 	public String printInventory(){
 		String output="---Inventory---";

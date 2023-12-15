@@ -22,7 +22,7 @@ public class Enemy {
 		defence=1;
 	}
 	public String toString(){
-		return "Enemy: " + name + " | "+ health + " Health | " + eWeapon;
+		return "Enemy: " + name + " | "+ Math.round(health) + " Health | " + eWeapon;
 	}
 	public void takingDamage(double damageIn){
 		health-=(damageIn/defence);
