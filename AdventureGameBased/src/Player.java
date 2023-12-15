@@ -3,7 +3,7 @@ public class Player {
 	private int soul;
 	private double health, defense;
 	private Object[] inventory;
-	private Weapon weapon1, weapon2, weapon3;
+	private Weapon weapon1;
 	
 	public Player(String name) {
 		this.name=name;

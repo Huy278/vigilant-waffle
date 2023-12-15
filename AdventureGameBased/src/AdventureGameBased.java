@@ -2,23 +2,27 @@ import java.util.Scanner;
 
 public class AdventureGameBased {
 	static Scanner scanr = new Scanner(System.in);
-	MySQLConnect mySQL = new MySQLConnect("adventureGame");
+	static MySQLConnect mySQL = new MySQLConnect("adventure");
 	static allWeapons weaponList = new allWeapons();
+	static allEnemies enemyList= new allEnemies();
 	public static void main(String[] args) {
-		weaponList.addWeapons();
+		//mySQL.createTable();
+		Object[][] weaponArray=mySQL.unpackWeaponDatabase();
+		putWeaponsInArray(weaponArray);
+		Object[][] enemyArr = mySQL.unpackEnemyDatabase();
+		putEnemiesInArray(enemyArr);
 		boolean running=true;
 		while(running){
-			int level=1;
 			clearScreen();
 			System.out.println("Adventure Game\n\nEnter to Start");
 			scanr.nextLine();
 			clearScreen();
 			int choice;
 			Player newPlayer=new Player("New guy");
-				Enemy baby= new Enemy("Baby", 10.0, 1.0, 1, 2);
-			choice=decisionMaking("Attack "+baby,"Do nothing","Drink potions","Leave");
+			Enemy newEnemy= allEnemies.randomTieredEnemy(2);
+			choice=decisionMaking("Attack "+newEnemy,"Do nothing","Drink potions","Leave");
 			if(choice==1){
-				battle(newPlayer, baby);
+				battle(newPlayer, newEnemy);
 			}
 			else if(choice==3){
 				clearScreen();
@@ -26,7 +30,8 @@ public class AdventureGameBased {
 				//use this to manually test mysql connection stuff
 				/*MySQLConnect alfa = new MySQLConnect("adventure");
 				Object[][] enemyArr = alfa.unpackEnemyDatabase();
-				print(enemyArr);*/
+				print(enemyArr);
+				putEnemiesInArray(enemyArr);*/
 			}
 			System.out.println("Type \"Play Again\" to play again or anything else to quit.");
 			if(!scanr.nextLine().equals("Play Again")){
@@ -97,8 +102,7 @@ public class AdventureGameBased {
 	public static void clearScreen() {
 		System.out.print("\033[H\033[2J");
 		System.out.flush();
-	} 
-	
+	}
 	static void print (Object[][] arr) {
 		String temp = "";
 		for (int i = 0; i < arr.length; i++) {
@@ -111,5 +115,16 @@ public class AdventureGameBased {
 			temp += "\n";
 		}
 		System.out.println(temp);
+	}
+	
+	static void putWeaponsInArray (Object[][] arr) {
+		for (int i = 0; i < arr.length; i++) {
+			weaponList.addWeapon(arr[i][0].toString(),((Number)arr[i][1]).doubleValue(),(int)arr[i][2]);
+		}
+	}
+	static void putEnemiesInArray (Object[][] arr) {
+		for (int i = 0; i < arr.length; i++) {
+			enemyList.addEnemy(arr[i][0].toString(),((Number)arr[i][1]).doubleValue(),((Number)arr[i][2]).doubleValue(),(int)arr[i][3],(int)arr[i][4]);
+		}
 	}
 }

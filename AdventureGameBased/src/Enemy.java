@@ -3,7 +3,7 @@ public class Enemy {
 	private double health, dmgMult;
 	private int souls, defence, tier;
 	private Weapon eWeapon;
-	public Enemy(String name, double health, double dmgMult, int souls, int tier) {
+	public Enemy(String name, double health, double dmgMult, int souls, int tier){
 		this.name=name;
 		this.health=health;
 		this.dmgMult=dmgMult;
@@ -42,5 +42,8 @@ public class Enemy {
 	}
 	public Weapon getWeapon(){
 		return eWeapon;
+	}
+	public int getSouls(){
+		return souls;
 	}
 }

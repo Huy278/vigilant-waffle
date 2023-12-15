@@ -1,14 +1,13 @@
 import java.util.ArrayList;
 import java.util.Random;
 public class allEnemies {
-    static ArrayList<Enemy> enemyArray;
+    private static ArrayList<Enemy> enemyArray;
     public allEnemies(){
-        }
-    public void addWeapons(){
-        enemyArray = new ArrayList();
-        enemyArray.add(new Enemy());
-        enemyArray.add(new Enemy());
-        }
+        enemyArray=new ArrayList();
+    }
+    public void addEnemy(String eName, double eHealth, double eDmgMult, int eSouls, int eTier){
+        enemyArray.add(new Enemy(eName,eHealth,eDmgMult,eSouls,eTier));
+    }
     public static Enemy randomTieredEnemy(int inTier){
         Random rnd = new Random();
         Enemy outEnemy = new Enemy();

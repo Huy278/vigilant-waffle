@@ -30,5 +30,7 @@ public class Boss {
 	public Weapon getWeapon(){
 		return bWeapon;
 	}
-
+	public int getSouls(){
+		return soul;
+	}
 }

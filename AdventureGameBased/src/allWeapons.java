@@ -3,11 +3,10 @@ import java.util.Random;
 public class allWeapons {
     static ArrayList<Weapon> weaponArray;
     public allWeapons(){
-    }
-    public void addWeapons(){
         weaponArray = new ArrayList();
-        weaponArray.add(new Weapon("Gun",20.0,1));
-        weaponArray.add(new Weapon("Awesome-cannon",24.0,2));
+    }
+    public void addWeapon(String wName, double wDamage, int wTier){
+        weaponArray.add(new Weapon(wName,wDamage,wTier));
     }
     public static Weapon randomTieredWeapon(int inTier){
         Random rnd = new Random();
