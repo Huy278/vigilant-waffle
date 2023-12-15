@@ -24,9 +24,11 @@ public class AdventureGameBased {
 				clearScreen();
 				System.out.println("You drank");
 				//use this to manually test mysql connection stuff
-				/*MySQLConnect alfa = new MySQLConnect("adventure");
+				
+				MySQLConnect alfa = new MySQLConnect("adventure");
+				alfa.createTable();
 				Object[][] enemyArr = alfa.unpackEnemyDatabase();
-				print(enemyArr);*/
+				print(enemyArr);
 			}
 			System.out.println("Type \"Play Again\" to play again or anything else to quit.");
 			if(!scanr.nextLine().equals("Play Again")){
